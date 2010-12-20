@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<import-steps>
+  <import-step id="raptus.article.multilanguagefields" version="20101213-01"
+               handler="pcommerce.multilanguagefields.setuphandlers.uninstall"
+               title="pcommerce.multilanguagefields uninstall">
+    Uninstalls multilanguage pcommerce
+  </import-step>
+</import-steps>

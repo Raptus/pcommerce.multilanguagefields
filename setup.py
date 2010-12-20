@@ -5,7 +5,7 @@ version = '1.0a1'
 
 setup(name='pcommerce.multilanguagefields',
       version=version,
-      description="Provides multilanguagefields support for pcommerce",
+      description="Provides raptus.multilanguagefields support for pcommerce",
       long_description=open("README.txt").read() + "\n" +
                        open(os.path.join("docs", "HISTORY.txt")).read(),
       # Get more strings from http://www.python.org/pypi?%3Aaction=list_classifiers
@@ -26,6 +26,7 @@ setup(name='pcommerce.multilanguagefields',
           'setuptools',
           'raptus.multilanguagefields',
           'pcommerce.core',
+          'archetypes.schemaextender',
           # -*- Extra requirements: -*-
       ],
       entry_points="""

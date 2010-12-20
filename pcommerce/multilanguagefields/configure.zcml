@@ -1,0 +1,41 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
+    xmlns:cmf="http://namespaces.zope.org/cmf"
+    i18n_domain="pcommerce.multilanguagefields">
+      
+    <include package="pcommerce.core" />
+    <include package="raptus.multilanguagefields" />
+    <include package="archetypes.schemaextender" />
+
+    <genericsetup:registerProfile
+      name="default"
+      title="pcommerce.multilanguagefields"
+      directory="profiles/default"
+      description=""
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      />
+
+    <genericsetup:importStep
+        name="pcommerce.multilanguagefields.install"
+        title="Configure MultilanguageFields for PCommerce"
+        description="Install Step: Configure MultilanguageFields for Pcommerce"
+        handler="pcommerce.multilanguagefields.setuphandlers.install">
+       <depends name="plone-final"/>
+    </genericsetup:importStep>
+
+    <genericsetup:registerProfile
+        name="uninstall"
+        title="pcommerce.multilanguagefields Uninstall"
+        directory="profiles/uninstall"
+        description="Uninstalls pcommerce.multilanguagefields"
+        provides="Products.GenericSetup.interfaces.EXTENSION"
+        for="Products.CMFPlone.interfaces.IPloneSiteRoot"
+        />
+
+    <!-- File System Directory Views registration -->
+    <cmf:registerDirectory
+        name="pcommerce_multilanguagefields"
+        recursive="True"/>
+
+</configure>

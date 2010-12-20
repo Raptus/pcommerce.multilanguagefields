@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<object name="portal_catalog" meta_type="Plone Catalog Tool" purge="False">
+ <index name="getType" meta_type="FieldIndex" remove="True" />
+ <index name="getType" meta_type="MultilanguageFieldIndex">
+  <indexed_attr value="getType"/>
+ </index>
+</object>

@@ -3,6 +3,8 @@ from zope.component import adapts
 
 from Products.CMFPlone import PloneMessageFactory as _p
 from Products.validation import V_REQUIRED
+from Products.Archetypes.atapi import AnnotationStorage
+from Products.ATContentTypes.configuration import zconf
 
 from archetypes.schemaextender.interfaces import ISchemaExtender
 
@@ -74,6 +76,19 @@ base_fields = [
             description = '',
             label = _p(u'label_image_caption', default=u'Image Caption'),
             size = 40)
+    ),
+    fields.TextField('text',
+        required=False,
+        searchable=True,
+        primary=True,
+        storage = AnnotationStorage(migrate=True),
+        default_output_type = 'text/x-html-safe',
+        widget = widgets.RichWidget(
+            description = '',
+            label = _p(u'label_body_text', default=u'Body Text'),
+            rows = 25,
+            allow_file_upload = zconf.ATDocument.allow_document_upload),
+        schemata='default',
     ),
 ]
 

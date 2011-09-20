@@ -1,6 +1,11 @@
 Changelog
 =========
 
+1.0a2 (Unreleased)
+------------------
+
+* Added multilanguage body text field to product and variation
+
 1.0a1 (2010-12-20)
 ------------------
 

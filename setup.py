@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 import os
 
-version = '1.0a3'
+version = '1.0a4'
 
 setup(name='pcommerce.multilanguagefields',
       version=version,
@@ -31,5 +31,7 @@ setup(name='pcommerce.multilanguagefields',
       ],
       entry_points="""
       # -*- Entry points: -*-
+      [z3c.autoinclude.plugin]
+      target = plone
       """,
       )

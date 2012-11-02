@@ -6,7 +6,7 @@ version = '1.0a4'
 setup(name='pcommerce.multilanguagefields',
       version=version,
       description="Provides raptus.multilanguagefields support for pcommerce",
-      long_description=open("README.txt").read() + "\n" +
+      long_description=open("README.rst").read() + "\n" +
                        open(os.path.join("docs", "HISTORY.txt")).read(),
       # Get more strings from http://www.python.org/pypi?%3Aaction=list_classifiers
       classifiers=[
@@ -16,7 +16,7 @@ setup(name='pcommerce.multilanguagefields',
       keywords='',
       author='Raptus AG',
       author_email='dev@raptus.com',
-      url='https://svn.plone.org/svn/collective/pcommerce.multilanguagefields',
+      url='https://github.com/Raptus/pcommerce.multilanguagefields',
       license='GPL',
       packages=find_packages(exclude=['ez_setup']),
       namespace_packages=['pcommerce'],
